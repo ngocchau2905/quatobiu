@@ -34,6 +34,7 @@
             ManageInvoicesMenuButton = new Button();
             AddInvoiceMenuButton = new Button();
             addInvoiceUsedControl = new AddInvoiceUsedControl();
+            ManageInvoicesUserControl = new ManagelnvoicesUserControl();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -75,6 +76,7 @@
             ManageInvoicesMenuButton.TabIndex = 1;
             ManageInvoicesMenuButton.Text = "Manage Invoices";
             ManageInvoicesMenuButton.UseVisualStyleBackColor = true;
+            ManageInvoicesMenuButton.Click += ManageInvoicesMenuButton_Click;
             // 
             // AddInvoiceMenuButton
             // 
@@ -88,10 +90,19 @@
             // 
             // addInvoiceUsedControl
             // 
-            addInvoiceUsedControl.Location = new Point(354, 33);
+            addInvoiceUsedControl.Location = new Point(255, 2);
             addInvoiceUsedControl.Name = "addInvoiceUsedControl";
-            addInvoiceUsedControl.Size = new Size(411, 459);
+            addInvoiceUsedControl.Size = new Size(460, 561);
             addInvoiceUsedControl.TabIndex = 1;
+            addInvoiceUsedControl.Load += addInvoiceUsedControl_Load;
+            // 
+            // ManageInvoicesUserControl
+            // 
+            ManageInvoicesUserControl.Location = new Point(241, 98);
+            ManageInvoicesUserControl.Name = "ManageInvoicesUserControl";
+            ManageInvoicesUserControl.Size = new Size(707, 477);
+            ManageInvoicesUserControl.TabIndex = 2;
+            ManageInvoicesUserControl.Load += managelnvoicesUserControl1_Load;
             // 
             // Form1
             // 
@@ -99,6 +110,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Screenshot_2025_03_28_125400;
             ClientSize = new Size(943, 575);
+            Controls.Add(ManageInvoicesUserControl);
             Controls.Add(addInvoiceUsedControl);
             Controls.Add(panel1);
             Name = "Form1";
@@ -116,5 +128,6 @@
         private Button ExitInvoiceMenuButton;
         private PictureBox pictureBox1;
         private AddInvoiceUsedControl addInvoiceUsedControl;
+        private ManagelnvoicesUserControl ManageInvoicesUserControl;
     }
 }

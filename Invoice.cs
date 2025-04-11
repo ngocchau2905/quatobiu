@@ -8,24 +8,24 @@ namespace Waterbill
 {
     public class Invoice
     {
-        protected string customerId { get; set; }
-        protected string customerName { get; set; }
-        protected string invoiceId { get; set; }
-        protected DateTime createdAt { get; set; }
+       public string customerId { get; set; }
+        public string customerName { get; set; }
+        public string invoiceId { get; set; }
+        public DateTime createdAt { get; set; }
 
-        private int thisMonthNumber;
-        private int lastMonthNumber;
+        public int thisMonthNumber;
+        public int lastMonthNumber;
 
-        protected int thismonthNUmber{get;set; }
-        protected int lastmonthNUmber{get;set;}
-        protected string typeOfCustomer {  get; set; } 
-        protected int numberOfPeople {  get; set; }
-        protected int amountConsumption {  get; set; }
-        protected double price {  get; set; }
-        protected double envFee {  get; set; }
-        protected double VATFee {  get; set; }
-        protected double subtotal {  get; set; }
-        protected double total { get; set; }
+        public int thismonthNUmber {get;set; }
+        public int lastmonthNUmber{get;set;}
+        public string typeOfCustomer {  get; set; }
+        public int numberOfPeople {  get; set; }
+        public int amountConsumption {  get; set; }
+        public double price {  get; set; }
+        public double envFee {  get; set; }
+        public double VATFee {  get; set; }
+        public double subtotal {  get; set; }
+        public double total { get; set; }
         public Invoice()
         {
             this.customerId = string.Empty;

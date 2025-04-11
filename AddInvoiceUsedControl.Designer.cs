@@ -51,6 +51,8 @@
             label14 = new Label();
             label15 = new Label();
             resultTotal = new Label();
+            resultEnvFee = new Label();
+            resultVATFee = new Label();
             SuspendLayout();
             // 
             // label1
@@ -173,8 +175,9 @@
             // 
             // TypeOfCustomerInput
             // 
+            TypeOfCustomerInput.DropDownStyle = ComboBoxStyle.DropDownList;
             TypeOfCustomerInput.FormattingEnabled = true;
-            TypeOfCustomerInput.Items.AddRange(new object[] { "Household customer            ", "Administrative agency, public services\t\t", "Production units\t\t", "Business services\t\t" });
+            TypeOfCustomerInput.Items.AddRange(new object[] { "Household customer", "Administrative agency, public services", "Production units", "Business services" });
             TypeOfCustomerInput.Location = new Point(16, 302);
             TypeOfCustomerInput.Name = "TypeOfCustomerInput";
             TypeOfCustomerInput.Size = new Size(151, 28);
@@ -220,28 +223,27 @@
             label12.AutoSize = true;
             label12.Location = new Point(109, 407);
             label12.Name = "label12";
-            label12.Size = new Size(65, 20);
+            label12.Size = new Size(0, 20);
             label12.TabIndex = 20;
-            label12.Text = "Subtotal";
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.Location = new Point(109, 452);
             label13.Name = "label13";
-            label13.Size = new Size(65, 20);
+            label13.Size = new Size(0, 20);
             label13.TabIndex = 19;
-            label13.Text = "Subtotal";
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(182, 428);
+            label14.Location = new Point(179, 419);
             label14.Name = "label14";
             label14.Size = new Size(109, 50);
             label14.TabIndex = 22;
             label14.Text = "Total";
+  
             // 
             // label15
             // 
@@ -259,10 +261,28 @@
             resultTotal.Size = new Size(0, 20);
             resultTotal.TabIndex = 23;
             // 
+            // resultEnvFee
+            // 
+            resultEnvFee.AutoSize = true;
+            resultEnvFee.Location = new Point(109, 407);
+            resultEnvFee.Name = "resultEnvFee";
+            resultEnvFee.Size = new Size(0, 20);
+            resultEnvFee.TabIndex = 24;
+            // 
+            // resultVATFee
+            // 
+            resultVATFee.AutoSize = true;
+            resultVATFee.Location = new Point(109, 452);
+            resultVATFee.Name = "resultVATFee";
+            resultVATFee.Size = new Size(0, 20);
+            resultVATFee.TabIndex = 25;
+            // 
             // AddInvoiceUsedControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(resultVATFee);
+            Controls.Add(resultEnvFee);
             Controls.Add(resultTotal);
             Controls.Add(label14);
             Controls.Add(label15);
@@ -288,7 +308,7 @@
             Controls.Add(label1);
             Name = "AddInvoiceUsedControl";
             Size = new Size(401, 524);
-            Load += AddInvoiceUsedControl_Load;
+
             ResumeLayout(false);
             PerformLayout();
         }
@@ -318,5 +338,7 @@
         private Label label14;
         private Label label15;
         private Label resultTotal;
+        private Label resultEnvFee;
+        private Label resultVATFee;
     }
 }
